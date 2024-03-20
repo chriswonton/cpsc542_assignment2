@@ -12,7 +12,7 @@ CPSC542 Section 01
 [Repository Link](https://github.com/chriswonton/cpsc542_assignment2)
 
 ## Dataset:
-[Butterfly Image Dataset](https://www.kaggle.com/datasets/veeralakrishna/butterfly-dataset)
+[Butterfly Dataset](https://www.kaggle.com/datasets/veeralakrishna/butterfly-dataset)
 
 ## References:
 - UNet Implementation is referenced from this code: [Kaggle UNet Segmentation Code](https://www.kaggle.com/code/bryanb/image-segmentation-u-net)
