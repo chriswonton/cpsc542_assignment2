@@ -1,4 +1,4 @@
-# CPSC542 Assignment 1
+# CPSC542 Assignment 2
 
 Chris Ton-That
 
