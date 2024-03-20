@@ -56,7 +56,7 @@ original_images, mask_images = load_images(original_dir, mask_dir)
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(original_images, mask_images, test_size=0.2, random_state=42)
 
-# Training UNet
+# ----- U-Net (Deep Learning Model) -----
 # Convolution block
 def conv_block(inputs, num_filters):
     x = tf.keras.layers.Conv2D(num_filters, (3, 3), activation="relu",
@@ -104,7 +104,7 @@ c9 = upsample_block(c8, c1, 16)
 # Output layer
 outputs = tf.keras.layers.Conv2D(1, (1, 1), activation='sigmoid')(c9)
 
-# Define and compile UNet model
+# Define and compile U-Net model
 model = tf.keras.Model(inputs=[inputs], outputs=[outputs])
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 # model.compile(optimizer='adam', loss='binary_crossentropy', metrics=[MeanIoU(num_classes=2)])
@@ -143,8 +143,8 @@ plt.title('Training and Validation IoU per Epoch')
 plt.legend()
 plt.savefig('visualizations/unet/iou.png')
 
-model.save('unet.h5')
-model = load_model('unet.h5')
+# model.save('unet.h5')
+# model = load_model('unet.h5')
 model.summary()
 
 # Plot original images, predicted masks, and actual masks
